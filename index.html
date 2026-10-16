@@ -1667,6 +1667,39 @@ img { max-width:100%; vertical-align:middle; }
   .imperial-hero-eyebrow{font-size:9px;}
 }
 </style>
+
+<style id="imperial-desktop-service-layout">
+/* Desktop layout: the Beauty Studio group occupies the three intended columns.
+   Rules start at 1024px; the existing phone and tablet layouts are preserved. */
+@media (min-width: 1024px) {
+  #servicios > .max-w-7xl { max-width: 1440px; }
+  #servicios .imperial-services-layout {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(24px, 2.3vw, 36px);
+    align-items: stretch;
+  }
+  #servicios .imperial-beauty-group {
+    grid-column: span 3 / span 3;
+    min-width: 0;
+  }
+  #servicios .imperial-beauty-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(20px, 2vw, 32px);
+  }
+  #servicios .imperial-service-card { min-width: 0; padding: clamp(22px, 2vw, 30px); }
+  #servicios .imperial-service-card h3 { font-size: 20px; line-height: 1.35; }
+  #servicios .imperial-service-card p { font-size: 14px; line-height: 1.75; }
+  #servicios .imperial-service-card a {
+    font-size: 12px;
+    line-height: 1.65;
+    min-height: 44px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+</style>
 </head>
 <body class="antialiased selection:bg-[#C5A880] selection:text-white">
 <!-- TOP ANNOUNCEMENT BAR -->
@@ -1724,10 +1757,10 @@ img { max-width:100%; vertical-align:middle; }
 <div class="brand-union-primary">IMPERIAL</div>
 <div class="brand-union-primary-sub">Peluquería Orgánica</div>
 <div aria-hidden="true" class="brand-union-ornament">✦</div>
-<div class="brand-union-secondary">Belleza que inspira</div>
-<div class="brand-union-studio">Cabello · Uñas · Cejas · Pestañas</div>
+<div class="brand-union-secondary">Ducximar López</div>
+<div class="brand-union-studio">Beauty Studio</div>
 <div aria-hidden="true" class="brand-union-rule-bottom"></div>
-<p class="brand-union-promise">Un solo lugar, toda tu belleza.</p>
+<p class="brand-union-promise">Dos espacios, una misma pasión por la belleza.</p>
 <p class="brand-union-services">Especialistas en belleza capilar, uñas, pestañas, cejas y depilación.</p>
 <p class="brand-union-address">Av. Walker Martínez 232, Local 4 · La Florida, Santiago</p>
 </div>
@@ -1981,9 +2014,9 @@ Ver servicios
                     Complementa tu cuidado capilar con nuestros servicios profesionales de manos, pies, mirada y rostro.
                 </p>
 </div>
-<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+<div class="imperial-services-layout grid grid-cols-1 lg:grid-cols-4 gap-8">
 <!-- Peluquería y Cuidado Capilar -->
-<div class="bg-white rounded-2xl p-6 border border-[#EFECE6] shadow-sm flex flex-col justify-between">
+<div class="imperial-service-card bg-white rounded-2xl p-6 border border-[#EFECE6] shadow-sm flex flex-col justify-between">
 <div>
 <div class="text-[#C5A880] text-2xl mb-4"><i class="fa-solid fa-scissors"></i></div>
 <h3 class="font-serif text-lg font-bold text-[#1F1F1F] mb-2">Peluquería y Cuidado</h3>
@@ -1995,15 +2028,15 @@ Ver servicios
 <span>Consultar peluquería</span> <i class="fa-solid fa-arrow-right"></i>
 </a>
 </div>
-<div class="lg:col-span-3">
+<div class="imperial-beauty-group lg:col-span-3">
 <div class="text-center space-y-3 mb-8">
 <h3 class="text-2xl sm:text-3xl font-serif font-bold text-[#1F1F1F]">Ducximar López Beauty Studio</h3>
 <p class="text-base text-[#C5A880] font-medium">Dos espacios, una misma pasión por la belleza.</p>
 <p class="text-sm text-[#6A6A6A]">Uñas, pestañas, cejas y depilación para completar tu experiencia de belleza.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="imperial-beauty-cards grid grid-cols-1 md:grid-cols-3 gap-8">
 <!-- Uñas -->
-<div class="bg-white rounded-2xl p-6 border border-[#EFECE6] shadow-sm flex flex-col justify-between">
+<div class="imperial-service-card bg-white rounded-2xl p-6 border border-[#EFECE6] shadow-sm flex flex-col justify-between">
 <div>
 <div class="text-[#C5A880] text-2xl mb-4"><i class="fa-solid fa-hand-sparkles"></i></div>
 <h3 class="font-serif text-lg font-bold text-[#1F1F1F] mb-2">Uñas</h3>
@@ -2016,7 +2049,7 @@ Ver servicios
 </a>
 </div>
 <!-- Pestañas -->
-<div class="bg-white rounded-2xl p-6 border border-[#EFECE6] shadow-sm flex flex-col justify-between">
+<div class="imperial-service-card bg-white rounded-2xl p-6 border border-[#EFECE6] shadow-sm flex flex-col justify-between">
 <div>
 <div class="text-[#C5A880] text-2xl mb-4"><i class="fa-solid fa-eye"></i></div>
 <h3 class="font-serif text-lg font-bold text-[#1F1F1F] mb-2">Pestañas</h3>
@@ -2029,7 +2062,7 @@ Ver servicios
 </a>
 </div>
 <!-- Cejas y Depilación -->
-<div class="bg-white rounded-2xl p-6 border border-[#EFECE6] shadow-sm flex flex-col justify-between">
+<div class="imperial-service-card bg-white rounded-2xl p-6 border border-[#EFECE6] shadow-sm flex flex-col justify-between">
 <div>
 <div class="text-[#C5A880] text-2xl mb-4"><i class="fa-solid fa-face-smile"></i></div>
 <h3 class="font-serif text-lg font-bold text-[#1F1F1F] mb-2">Cejas y Depilación</h3>
